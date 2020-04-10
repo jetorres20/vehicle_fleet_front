@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import{RegistroModule} from './Registro/Registro.module';
+import {VehiculoModule} from './Vehiculo/Vehiculo.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     RegistroModule,
+    VehiculoModule,
     HttpClientModule
   ],
   providers: [],
