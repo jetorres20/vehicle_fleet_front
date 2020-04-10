@@ -1,0 +1,22 @@
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="h4">Identificador de registro</th>
+          <th class="h4">Vigencia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let r of registros">
+          <td>
+            <dd>{{r.id}}</dd>
+          </td>
+          <td>
+            <dd>{{r.vigente}}</dd>
+          </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
