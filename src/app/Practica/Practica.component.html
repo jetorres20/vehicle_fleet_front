@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="h4">Destino</th>
+          <th class="h4">Descripcion</th>
+          <th class="h4">Tiempo De Desplazamiento(H)</th>
+          <th class="h4">Duracion(H)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of practicas">
+          <td>
+            <dd>{{c.destino}}</dd>
+          </td>
+          <td>
+            <dd>{{c.descripcion}}</dd>
+          </td>
+          <td>
+            <dd>{{c.tiempoDeDesplazamiento}}</dd>
+          </td>
+          <td>
+            <dd>{{c.duracion}}</dd>
+          </td>
+         
+         
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
