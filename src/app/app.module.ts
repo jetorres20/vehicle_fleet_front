@@ -4,8 +4,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 import{RegistroModule} from './Registro/Registro.module';
 import {VehiculoModule} from './Vehiculo/Vehiculo.module';
-import {ProfesorModule}from './profesor/profesor.module';
-import {PracticaModule}from './practica/practica.module';
+import {ProfesorModule}from './Profesor/Profesor.module';
+import {PracticaModule}from './Practica/Practica.module';
+import {EstudianteModule} from './Estudiante/Estudiante.module';
+import {EncuestaModule} from './Encuesta/Encuesta.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,6 +23,8 @@ import { AppComponent } from './app.component';
     VehiculoModule,
     ProfesorModule,
     PracticaModule,
+    EstudianteModule,
+    EncuestaModule,
     HttpClientModule
   ],
   providers: [],
