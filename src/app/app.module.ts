@@ -8,9 +8,11 @@ import {ProfesorModule}from './Profesor/Profesor.module';
 import {PracticaModule}from './Practica/Practica.module';
 import {EstudianteModule} from './Estudiante/Estudiante.module';
 import {EncuestaModule} from './Encuesta/Encuesta.module';
+import { ConductorModule } from './conductor/conductor.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { AppComponent } from './app.component';
     PracticaModule,
     EstudianteModule,
     EncuestaModule,
+    ConductorModule,
     HttpClientModule
   ],
   providers: [],

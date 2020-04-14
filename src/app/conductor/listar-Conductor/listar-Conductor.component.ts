@@ -10,7 +10,7 @@ import { ConductorService } from '../conductor.service';
 export class ListarConductorComponent implements OnInit {
 
   constructor(private condService: ConductorService) { }
-  private conductores:Array<conductor>;
+  public conductores:Array<conductor>;
 
   getConductores(): void{
     this.condService.getConductores().subscribe(conductores => {
