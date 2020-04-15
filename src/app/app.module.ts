@@ -10,9 +10,11 @@ import {EstudianteModule} from './Estudiante/Estudiante.module';
 import {EncuestaModule} from './Encuesta/Encuesta.module';
 import { UniversidadModule } from './universidad/universidad.module'
 import { FranjaHorariaSemanalModule } from './franjaHorariaSemanal/franjaHorariaSemanal.module'
+import { ConductorModule } from './conductor/conductor.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 
 @NgModule({
   declarations: [
@@ -29,6 +31,7 @@ import { AppComponent } from './app.component';
     EncuestaModule,
     UniversidadModule,
     FranjaHorariaSemanalModule,
+    ConductorModule,
     HttpClientModule
   ],
   providers: [],
