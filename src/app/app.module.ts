@@ -8,6 +8,8 @@ import {ProfesorModule}from './Profesor/Profesor.module';
 import {PracticaModule}from './Practica/Practica.module';
 import {EstudianteModule} from './Estudiante/Estudiante.module';
 import {EncuestaModule} from './Encuesta/Encuesta.module';
+import { UniversidadModule } from './universidad/universidad.module'
+import { FranjaHorariaSemanalModule } from './franjaHorariaSemanal/franjaHorariaSemanal.module'
 import { ConductorModule } from './conductor/conductor.module';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -29,6 +31,8 @@ import { AgendaModule } from './Agenda/Agenda.module';
     PracticaModule,
     EstudianteModule,
     EncuestaModule,
+    UniversidadModule,
+    FranjaHorariaSemanalModule,
     ConductorModule,
     AgendaModule,
     HttpClientModule
