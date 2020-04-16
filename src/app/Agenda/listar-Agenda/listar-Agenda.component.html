@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="h4">fecha</th>
+          <th class="h4">reservado</th>
+          <th class="h4">Numero Reserva</th>
+          <th class="h4">conductor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let a of agendas">
+          <td>
+            <dd>{{a.fecha}}</dd>
+          </td>
+          <td>
+            <dd>{{a.reservado}}</dd>
+          </td>
+          <td>
+            <dd>{{a.idReserva}}</dd>
+          </td>
+          <td>
+            <dd>{{a.conductor}}</dd>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+

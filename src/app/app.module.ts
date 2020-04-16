@@ -12,6 +12,8 @@ import { ConductorModule } from './conductor/conductor.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AgendaModule } from './Agenda/Agenda.module';
+
 
 
 @NgModule({
@@ -28,6 +30,7 @@ import { AppComponent } from './app.component';
     EstudianteModule,
     EncuestaModule,
     ConductorModule,
+    AgendaModule,
     HttpClientModule
   ],
   providers: [],
