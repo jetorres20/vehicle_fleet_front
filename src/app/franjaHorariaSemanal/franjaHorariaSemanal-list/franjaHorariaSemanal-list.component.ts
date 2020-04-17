@@ -10,10 +10,10 @@ export class FranjaHorariaSemanalListComponent implements OnInit {
 
   constructor(private franjaService:FranjaHorariaSemanalService) { }
 
-  private franjas:Array<FranjaHorariaSemanal>;
+  public franjas:Array<FranjaHorariaSemanal>;
 
   ngOnInit() {
-  
+    this.getFranjas();
   }
 
   getFranjas(){

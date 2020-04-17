@@ -1,3 +1,30 @@
-<p>
-  franjaHorariaSemanal-list works!
-</p>
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="h4">Id</th>
+          <th class="h4">Start Hour</th>
+          <th class="h4">Finish Hour</th>
+          <th class="h4">Conductor</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of franjas">
+          <td>
+            <dd>{{c.id}}</dd>
+          </td>
+          <td>
+            <dd>{{c.startHour}}</dd>
+          </td>
+          <td>
+            <dd>{{c.finishHour}}</dd>
+          </td>
+          <td>
+            <dd>{{c.conductor}}</dd>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

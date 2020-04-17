@@ -1,3 +1,30 @@
-<p>
-  universidad-list works!
-</p>
+<div class="container-fluid">
+  <div class="col-6">
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="h4">Id</th>
+          <th class="h4">Nombre</th>
+          <th class="h4">Ciudad</th>
+          <th class="h4">Privada</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of universidades">
+          <td>
+            <dd>{{c.id}}</dd>
+          </td>
+          <td>
+            <dd>{{c.name}}</dd>
+          </td>
+          <td>
+            <dd>{{c.city}}</dd>
+          </td>
+          <td>
+            <dd>{{c.privada}}</dd>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
