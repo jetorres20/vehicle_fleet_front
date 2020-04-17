@@ -1,8 +1,8 @@
 export class conductor{
 
-    constructor(private idDB: number, private name:string, private identificacion: number){}
+    constructor(private id: number, private name:string, private idConductor: number){}
 
-getid(): number{return this.idDB;}
+getid(): number{return this.id;}
 getName(): string{return this.name;}
-getIdentificacion(): number{return this.identificacion}
+getIdentificacion(): number{return this.idConductor}
 }

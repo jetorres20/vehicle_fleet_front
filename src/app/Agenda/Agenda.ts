@@ -1,11 +1,12 @@
+import { conductor } from '../conductor/conductor';
+
 export class Agenda{
 
-    constructor(private fecha: Date, private reservado: boolean, 
-        private idReserva: number, private idConductor: number, private conductor:number){}
+    constructor(private fecha: Date, private reservada: Boolean, 
+        private reserva: number, private conductor: conductor){}
 
     getFecha(): Date {return this.fecha;}
-    getReservado(): boolean {return this.reservado;}
-    getReserva(): number {return this.idReserva;}
-    getCond(): number {return this.conductor;}
-    getidCond(): number {return this.idConductor;}
+    getReservado(): Boolean {return this.reservada;}
+    getReserva(): number {return this.reserva;}
+    getidCond(): conductor {return this.conductor;}
 }
