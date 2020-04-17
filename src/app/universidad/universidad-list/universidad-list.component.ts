@@ -11,7 +11,7 @@ import { UniversidadService } from '../universidad.service';
 export class UniversidadListComponent implements OnInit {
 
   constructor(private universidadService:UniversidadService) { }
-  private universidades:Array<Universidad>;
+  public universidades:Array<Universidad>;
   ngOnInit() {
     this.getUniversidades();
   }
