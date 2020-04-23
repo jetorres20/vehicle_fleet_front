@@ -14,7 +14,7 @@
             <dd>{{c.id}}</dd>
           </td>
           <td>
-            <dd>{{c.name}}</dd>
+            <dd (click = "onSelected(c)")>{{c.name}}</dd>
           </td>
           <td>
             <dd>{{c.idConductor}}</dd>
@@ -22,5 +22,11 @@
         </tr>
       </tbody>
     </table>
+  </div>
+  <div class="col-6">
+    <div class="col border">
+      <div *ngIf="selected">
+        <app-conductor-detail [conductorDetail]="selectedConductor"></app-conductor-detail>
+      </div>
   </div>
 </div>

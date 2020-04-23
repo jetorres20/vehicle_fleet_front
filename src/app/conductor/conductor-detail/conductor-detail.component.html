@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <p class="h3 p-3">conductor numero {{conductorDetail.id}}</p>
+  <div class="row">
+    <div class="col">
+      <dl>
+        <dt> Nombre</dt>
+        <dd>{{conductorDetail.name}}</dd>
+        <dt>identificacion</dt>
+        <dd>{{conductorDetail.idConductor}}</dd>
+        </dl>
+    </div>
+    <div class = "col">
+      <dt>Agenda</dt>
+        <dd *ngFor = "let a of conductorDetail.agendas">{{a.fecha}}</dd>
+    </div>
+  </div>
+</div>

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { conductor } from './conductor';
 import { environment } from 'src/environments/environment';
+import { ConductorDetail } from './conductorDetail';
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +14,8 @@ private apiUrl = environment.baseUrl +'conductores';
 
 constructor(private http:HttpClient) { }
 
-getConductores(): Observable<conductor[]>{
-  return this.http.get<conductor[]>(this.apiUrl);
+getConductores(): Observable<Array<ConductorDetail>>{
+  return this.http.get<Array<ConductorDetail>>(this.apiUrl);
 }
 
 }
