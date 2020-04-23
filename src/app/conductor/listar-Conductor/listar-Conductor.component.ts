@@ -11,10 +11,11 @@ import { ConductorDetail } from '../conductorDetail';
 export class ListarConductorComponent implements OnInit {
 
   selected = false;
-  selectedConductor:conductor;
-
+  selectedConductor:ConductorDetail;
+  conductores:Array<ConductorDetail>;
+  
   constructor(private condService: ConductorService) { }
-  public conductores:Array<ConductorDetail>;
+  
 
   getConductores(): void{
     this.condService.getConductores().subscribe(conductores => {
@@ -22,7 +23,7 @@ export class ListarConductorComponent implements OnInit {
     });
   }
 
-  onSelected(c:conductor): void{
+  onSelected(c:ConductorDetail): void{
     this.selected = true;
     this.selectedConductor = c;
   }
