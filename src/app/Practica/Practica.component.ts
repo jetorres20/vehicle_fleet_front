@@ -10,12 +10,18 @@ export class PracticaComponent implements OnInit {
 
   constructor(private listarPracticaService: ListarPracticaService) { }
   public practicas: Array<Practica>;
+  selectedPractica: Practica;
+  selected = false;
   getPracticas()
   {
     this.listarPracticaService.getPracticas().subscribe(cs => {
       this.practicas = cs;
     });
     
+  }
+  onSelected(b: Practica): void {
+    this.selected = true;
+    this.selectedPractica = b;
   }
   ngOnInit() {
     this.getPracticas();

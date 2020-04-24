@@ -1,32 +1,17 @@
 <div class="container-fluid">
-  <div class="col-6">
-    <table class="table">
-      <thead>
-        <tr>
-          <th class="h4">Destino</th>
-          <th class="h4">Descripcion</th>
-          <th class="h4">Tiempo De Desplazamiento(H)</th>
-          <th class="h4">Duracion(H)</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let c of practicas">
-          <td>
-            <dd>{{c.destino}}</dd>
-          </td>
-          <td>
-            <dd>{{c.descripcion}}</dd>
-          </td>
-          <td>
-            <dd>{{c.tiempoDeDesplazamiento}}</dd>
-          </td>
-          <td>
-            <dd>{{c.duracion}}</dd>
-          </td>
-         
-         
-        </tr>
-      </tbody>
-    </table>
+
+  <div class="row p-2">
+    <div class="col-1" *ngFor="let c of practicas">
+        <div class = "row">
+          <h4 (click)="onSelected(c)">{{c.id}}</h4>
+        </div>
+    </div>
+  </div>
+  <div class="row p-2">
+    <div class="col border">
+      <div *ngIf="selected">
+          <app-PracticaDetail [practicaDetail] = "selectedPractica"></app-PracticaDetail>
+      </div>
+    </div>
   </div>
 </div>

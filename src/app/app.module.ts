@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 
 import {RegistroModule} from './Registro/Registro.module';
 import {VehiculoModule} from './Vehiculo/Vehiculo.module';
@@ -17,11 +17,6 @@ import {TipoVehiculoModule} from './TipoVehiculo/TipoVehiculo.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AgendaModule } from './Agenda/Agenda.module';
-import { HttpErrorInterceptor } from './interceptors/Http-Error-Interceptor.service';
-import { ToastrModule } from 'ngx-toastr';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-
 
 @NgModule({
   declarations: [
@@ -43,15 +38,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ConductorModule,
     AgendaModule,
     HttpClientModule,
-    ToastrModule.forRoot(),
-    BrowserAnimationsModule
   ],
   providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: HttpErrorInterceptor,
-      multi: true
-    }
   ],
   bootstrap: [
     AppComponent
