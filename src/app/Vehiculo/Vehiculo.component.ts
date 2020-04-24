@@ -10,6 +10,8 @@ export class VehiculoComponent implements OnInit {
 
   constructor(private listarVehiculosService: ListarVehiculosService) { }
   public vehiculos: Array<Vehiculo>;
+  selected = false;
+  selectedVehiculo :Vehiculo;
   getVehiculos()
   {
     this.listarVehiculosService.getVehiculos().subscribe(cs => {
@@ -17,6 +19,11 @@ export class VehiculoComponent implements OnInit {
     });
     
   }
+  onSelected(b: Vehiculo): void {
+    this.selected = true;
+    this.selectedVehiculo = b;
+  }
+  
   ngOnInit() {
     this.getVehiculos();
   }

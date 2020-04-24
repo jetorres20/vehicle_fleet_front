@@ -11,11 +11,20 @@ export class RegistroComponent implements OnInit {
 
   constructor(private listarRegistroService:ListarRegistroService) { }
   public registros : Array<Registro>;
+  selected = false;
+  selectedRegistro: Registro;
+
   getRegistroList() {
     this.listarRegistroService.getRegistros().subscribe(cs => {
       this.registros = cs;
     });
   }
+
+  onSelected(r: Registro): void {
+    this.selected = true;
+    this.selectedRegistro = r;
+  }
+
   ngOnInit() {
     this.getRegistroList();
   }
