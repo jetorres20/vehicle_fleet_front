@@ -1,26 +1,16 @@
+
+
 <div class="container-fluid">
-  <div class="col-6">
-    <table class="table">
-      <thead>
-        <tr>
-          <th class="h4">Id</th>
-          <th class="h4">Nombre</th>
-          <th class="h4">Numero Identificacion</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let c of profesores">
-          <td>
-            <dd>{{c.id}}</dd>
-          </td>
-          <td>
-            <dd>{{c.nombre}}</dd>
-          </td>
-          <td>
-            <dd>{{c.identificacion}}</dd>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <div class=row>
+   
+      <div *ngFor="let c of profesores" class="card" style="width: 16rem;">
+        <figure class="figure">
+          <img src='https://image.flaticon.com/icons/png/512/236/236909.png' height="100" width="150" />
+          <figcaption class="title-caption text-center"> <b class="card-text">Id:</b>{{c.id}}</figcaption>
+          <figcaption class="title-caption text-center"><b class="card-text">Nombre:</b>{{c.nombre}}</figcaption>
+          <figcaption class="title-caption text-center"><b class="card-text">Numero identificacion:</b>{{c.identificacion}}</figcaption>
+        </figure>
+    
+    </div>
   </div>
 </div>
