@@ -12,6 +12,27 @@
     <div class = "col">
       <dt>Agenda</dt>
         <dd *ngFor = "let a of conductorDetail.agendas">{{a.fecha}}</dd>
+      <dt>Franja Horaria semanal</dt>
+      <dd>
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="h4">hora inicio</th>
+            <th class="h4">hora final</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of conductorDetail.franjasH">
+            <td>
+              <dd>{{s.startHourA}}</dd>
+            </td>
+            <td>
+              <dd>{{s.finishHourA}}</dd>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </dd>
     </div>
   </div>
 </div>
