@@ -13,7 +13,7 @@ export class TipoVehiculoDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.tipoVehiculoDetail.tipoDeVehiculo);
+    console.log(this.tipoVehiculoDetail.id);
   }
 
 }

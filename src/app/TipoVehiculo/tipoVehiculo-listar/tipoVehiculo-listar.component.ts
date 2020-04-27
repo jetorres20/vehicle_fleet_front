@@ -11,6 +11,10 @@ export class TipoVehiculoListarComponent implements OnInit {
 
   constructor(private tipoVehiculoService: TipoVehiculoService) { }
   private tipoVehiculos: Array<TipoVehiculo>;
+
+  selected = false;
+  selectedTipoVehiculo : TipoVehiculo;
+
   ngOnInit() {
     this.getTipoVehiculos()
   }
@@ -20,5 +24,10 @@ export class TipoVehiculoListarComponent implements OnInit {
       .subscribe(r => {
         this.tipoVehiculos = r;
       });
+  }
+
+  onSelected(b: TipoVehiculo): void{
+    this.selected = true;
+    this.selectedTipoVehiculo = b;
   }
 }
