@@ -1,22 +1,21 @@
 <div class="container-fluid">
-<div class="well">
-<h1>Lista de los Tipo de Vehiculos</h1>
-</div>
-  <div class="row p-2">
-  <h1> ID de los Tipo de Vehiculos </h1>
+  <div class="well">
+    <h1>Lista de los Tipos de Vehiculos</h1>
   </div>
   <div class="row p-2">
-    <div class="col-1" *ngFor="let r of tipoVehiculos">
-        <div class = "row">
-          <h4 (click)="onSelected(r)">{{r.id}}</h4>
-        </div>
+    <div class="col">
+      <h3> Seleccione el ID del TipoVehiculo sobre el cual desea más información: </h3>
     </div>
   </div>
   <div class="row p-2">
-    <div class="col border">
-      <div *ngIf="selected">
-          <app-tipoVehiculoDetail [tipoVehiculoDetail] = "selectedTipoVehiculo"></app-tipoVehiculoDetail>
+    <div class="col-6">
+      <ul class="list-group">
+        <li class="list-group-item" (click)="onSelected(r)" *ngFor="let r of tipoVehiculos">{{r.id}}</li>
+      </ul>
+    </div>
+    <div *ngIf="selected" class="col-6">
+      <div class="well">
+        <app-tipoVehiculoDetail [tipoVehiculoDetail]="selectedTipoVehiculo"></app-tipoVehiculoDetail>
       </div>
     </div>
   </div>
-</div>
