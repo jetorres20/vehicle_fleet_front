@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <p class="h3 p-3">{{universidadDetail.name}}    id: {{universidadDetail.id}}</p>
+  <div class="row">
+    <div class="col">
+      <dt>Estudiantes</dt>
+      <dd>
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="h4">Nombre</th>
+              <th class="h4">Identificacion</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let s of universidadDetail.estudiantes">
+              <td>
+                <dd>{{s.nombre}}</dd>
+              </td>
+              <td>
+                <dd>{{s.codigo}}</dd>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </dd>
+    </div>
+    <div class = "col">
+      <dt>Profesores</dt>
+      <dd>
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="h4">Nombre</th>
+            <th class="h4">Identificacion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of universidadDetail.profesores">
+            <td>
+              <dd>{{s.nombre}}</dd>
+            </td>
+            <td>
+              <dd>{{s.identificacion}}</dd>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </dd>
+    </div>
+  </div>
+</div>

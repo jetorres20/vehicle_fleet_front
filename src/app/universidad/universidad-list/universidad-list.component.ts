@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Universidad } from '../universidad';
 import { UniversidadService } from '../universidad.service';
+import { UniversidadDetail } from '../universidadDetail';
 
 @Component({
   selector: 'app-universidad-list',
@@ -10,10 +11,19 @@ import { UniversidadService } from '../universidad.service';
 
 export class UniversidadListComponent implements OnInit {
 
-  constructor(private universidadService:UniversidadService) { }
+  selected=false;
+  selectedUniversidad:UniversidadDetail;
   public universidades:Array<Universidad>;
+
+  constructor(private universidadService:UniversidadService) { }
+  
   ngOnInit() {
     this.getUniversidades();
+  }
+
+  onSelected(u:UniversidadDetail):void{
+    this.selected=true;
+    this.selectedUniversidad=u;
   }
 
   getUniversidades(){

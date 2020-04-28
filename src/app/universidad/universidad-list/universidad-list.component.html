@@ -15,7 +15,7 @@
             <dd>{{c.id}}</dd>
           </td>
           <td>
-            <dd>{{c.name}}</dd>
+            <dd (click)= "onSelected(c)">{{c.name}}</dd>
           </td>
           <td>
             <dd>{{c.city}}</dd>
@@ -26,5 +26,11 @@
         </tr>
       </tbody>
     </table>
+  </div>
+  <div class="col-6">
+    <div class="col border">
+      <div *ngIf="selected">
+        <app-universidad-detail [universidadDetail]="selectedUniversidad"></app-universidad-detail>
+      </div>
   </div>
 </div>
