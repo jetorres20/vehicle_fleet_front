@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ListarEncuestaService {
-  private apiUrl = environment.baseUrl + 'courses.json';
+  private apiUrl = environment.baseUrl + 'encuestas';
 
 constructor(private http: HttpClient) { }
 getEncuestas(): Observable<Encuesta[]> {

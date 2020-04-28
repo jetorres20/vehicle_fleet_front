@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Estudiante } from './Estudiante';
 import { ListarEstudianteService } from './listarEstudiante.service';
+import { EstudianteDetalle } from './estudianteDetalle';
 @Component({
   selector: 'app-Estudiante',
   templateUrl: './Estudiante.component.html',
@@ -9,7 +9,10 @@ import { ListarEstudianteService } from './listarEstudiante.service';
 export class EstudianteComponent implements OnInit {
 
   constructor(private listarEstudianteService: ListarEstudianteService) { }
-  private estudiantes: Array<Estudiante>;
+  private estudiantes: Array<EstudianteDetalle>;
+  selected = false;
+  selectedStudent: EstudianteDetalle;
+
   getEstudiantes(){
     this.listarEstudianteService.getEstudiantes().subscribe(cs => {
       this.estudiantes = cs;
@@ -19,4 +22,8 @@ export class EstudianteComponent implements OnInit {
     this.getEstudiantes();
   }
 
+  onSelected(s:EstudianteDetalle): void{
+    this.selected = true;
+    this.selectedStudent = s;
+  }
 }

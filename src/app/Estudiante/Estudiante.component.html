@@ -14,13 +14,21 @@
             <dd>{{c.id}}</dd>
           </td>
           <td>
-            <dd>{{c.nombre}}</dd>
+            <dd >{{c.nombre}}</dd>
           </td>
           <td>
-            <dd>{{c.codigo}}</dd>
+            <dd (click) = "onSelected(c)" >{{c.codigo}}</dd>
           </td>
         </tr>
       </tbody>
     </table>
+  </div>
+
+  <div class="row p-2">
+    <div class="col border">
+      <div *ngIf="selected">
+        <app-estudianteDetail [estudianteDetail]="selectedStudent"></app-estudianteDetail>
+      </div>
+    </div>
   </div>
 </div>

@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <p class="h3 p-3">Estudiante número {{estudianteDetail.id}}</p>
+  <div class="row">
+    <div class="col">
+      <dl>
+        <dt> Nombre</dt>
+        <dd>{{estudianteDetail.nombre}}</dd>
+        <dt>Código</dt>
+        <dd>{{estudianteDetail.codigo}}</dd>
+        </dl>
+    </div>
+    <div class = "col">
+      <dt>Reservas</dt>
+        <dd *ngFor = "let a of estudianteDetail.reservas">{{a.fechaDeServicio}}</dd>
+      <dt>Profesores</dt>
+      <dd>
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="h4">Nombre</th>
+            <th class="h4">Identificacion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of estudianteDetail.profesores">
+            <td>
+              <dd>{{s.nombre}}</dd>
+            </td>
+            <td>
+              <dd>{{s.identificacion}}</dd>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </dd>
+    </div>
+  </div>
+</div>

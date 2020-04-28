@@ -11,6 +11,8 @@ export class EncuestaComponent implements OnInit {
 
   private encuestas: Array<Encuesta>;
   constructor(private listarEncuestasService: ListarEncuestaService) { }
+  selectedEncuesta: Encuesta;
+  selected = false;
   getEncuestas() {
     this.listarEncuestasService.getEncuestas().subscribe(cs => {
       this.encuestas = cs;
@@ -18,6 +20,11 @@ export class EncuestaComponent implements OnInit {
   }
   ngOnInit() {
     this.getEncuestas();
+  }
+
+  onSelected(e: Encuesta): void {
+    this.selected = true;
+    this.selectedEncuesta = e;
   }
 
 }
